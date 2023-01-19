@@ -1,0 +1,79 @@
+.imageslider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 95vh;
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
+.images {
+  position: relative;
+  width: 600px;
+  height: 300px;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .images {
+    width: 280px;
+  }
+}
+
+.left {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  z-index: 1;
+  cursor: pointer;
+  color: whitesmoke;
+  background-color: transparent;
+  font-size: 45px;
+}
+
+.left:hover {
+  color: grey;
+}
+
+.right {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  z-index: 1;
+  cursor: pointer;
+  color: whitesmoke;
+  background-color: transparent;
+  font-size: 45px;
+}
+.right:hover {
+  color: gray;
+}
+
+.dotcontainer {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 100px;
+  left: 42%;
+}
+
+@media only screen and (max-width: 600px) {
+  .dotcontainer {
+    left: 25%;
+  }
+}
+
+.dot {
+  margin: 0 1px;
+  cursor: pointer;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: transparent;
+}
+
+.dot.active {
+  background: whitesmoke;
+}
